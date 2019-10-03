@@ -1,0 +1,113 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  dev                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volVectorField;
+    location    "0.01";
+    object      Force;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+dimensions      [1 1 -2 0 0 0 0];
+
+internalField   uniform (0 0 0);
+
+boundaryField
+{
+    inlet
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    outlet
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    flap
+    {
+        type            calculated;
+        value           nonuniform List<vector> 
+33
+(
+(2.86949 0 9.04246e-05)
+(2.86807 0 0.000554775)
+(2.86039 0 0.000932854)
+(2.8459 0 0.00132227)
+(2.82384 0 0.00172812)
+(2.79284 0 0.00215703)
+(2.75078 0 0.00261732)
+(2.69437 0 0.00312004)
+(2.6184 0 0.00368053)
+(2.51433 0 0.0043212)
+(2.36714 0 0.00507649)
+(2.14814 0 0.00600308)
+(1.79544 0 0.00720354)
+(1.15062 0 0.00889536)
+(-0.306967 -0 0.0106718)
+(0.00583491 8.01954e-18 6.34114)
+(0.00517789 8.01954e-18 6.32925)
+(0.00386907 0 5.29684)
+(1.07643 0 -7.62986e-05)
+(1.1036 0 -0.000465978)
+(1.15597 0 -0.000779286)
+(1.23586 0 -0.00109475)
+(1.34714 0 -0.00141219)
+(1.49555 0 -0.00172969)
+(1.68946 0 -0.00204126)
+(1.94128 0 -0.00233215)
+(2.27 0 -0.00257205)
+(2.6997 0 -0.0026846)
+(3.26655 0 -0.00245459)
+(4.09473 0 -0.00156076)
+(5.46181 0 -0.000160584)
+(7.47159 1.63109e-17 0.000162834)
+(9.69071 0 -0.00302593)
+)
+;
+    }
+    upperWall
+    {
+        type            calculated;
+        value           nonuniform 0();
+    }
+    lowerWall
+    {
+        type            calculated;
+        value           uniform (0 0 0);
+    }
+    frontAndBack
+    {
+        type            empty;
+    }
+    procBoundary4to1
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary4to2
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary4to3
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+    procBoundary4to5
+    {
+        type            processor;
+        value           uniform (0 0 0);
+    }
+}
+
+
+// ************************************************************************* //

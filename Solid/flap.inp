@@ -3,7 +3,7 @@
 *INCLUDE, INPUT=Solid/interface_beam.nam
 *MATERIAL, Name=EL
 *ELASTIC
- 400000, 0.3
+ 120000, 0.2
 *DENSITY
  3000
 *SOLID SECTION, Elset=Eall, Material=EL

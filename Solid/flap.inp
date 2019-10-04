@@ -2,8 +2,8 @@
 *INCLUDE, INPUT=Solid/fix1_beam.nam
 *INCLUDE, INPUT=Solid/interface_beam.nam
 *MATERIAL, Name=EL
-*ELASTIC
- 120000, 0.2
+*HYPERELASTIC,NEO HOOKE
+ 0.2587,1.5828E-3,20
 *DENSITY
  3000
 *SOLID SECTION, Elset=Eall, Material=EL
